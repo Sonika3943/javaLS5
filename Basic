@@ -1,0 +1,215 @@
+1.STUDENT WITH INSTANCE VARIABLE
+class Student { 
+String name;  
+int age;  
+Student(String n, int a) { 
+name = n; 
+age = a; 
+} 
+void display() { 
+System.out.println("Name: " + name + ", Age: " + age); 
+} 
+public static void main(String[] args) { 
+Student s1 = new Student("Amit", 21); 
+Student s2 = new Student("Priya", 22); 
+s1.display(); 
+s2.display(); 
+} 
+} 
+
+2.BOOK TITLE AND INFO
+class Book { 
+    String title; 
+    static int countBooks = 0;  
+ 
+    Book(String t) { 
+        title = t; 
+        countBooks++; 
+    } 
+ 
+    void show() { 
+        System.out.println("Book Title: " + title); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Book b1 = new Book("Java Programming"); 
+        Book b2 = new Book("Python Basics"); 
+        b1.show(); 
+        b2.show(); 
+        System.out.println("Total Books: " + countBooks); 
+    } 
+}
+
+3.CIRCLE AREA
+class Circle { 
+    double radius; 
+ 
+    Circle(double r) { 
+        radius = r; 
+    } 
+ 
+    void area() { 
+        double area = 3.14 * radius * radius;  
+        System.out.println("Area: " + area); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Circle c1 = new Circle(5.0); 
+        c1.area(); 
+    } 
+} 
+
+4.COUNTER
+class Counter { 
+    static int count = 0; 
+ 
+    Counter() { 
+        count++;
+    } 
+ 
+    void show() { 
+        System.out.println("Objects created: " + count); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Counter c1 = new Counter(); 
+        Counter c2 = new Counter(); 
+        Counter c3 = new Counter(); 
+ 
+        c1.show(); // all objects share the same static count 
+    } 
+}
+
+5.EMPLOYEE SALARY
+class Employee { 
+    String empName; 
+    double salary; 
+ 
+    Employee(String n, double s) { 
+        empName = n; 
+        salary = s; 
+    } 
+ 
+    void display() { 
+        String msg = "Employee: " + empName + ", Salary: " + salary; 
+        System.out.println(msg); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Employee e1 = new Employee("Ravi", 40000); 
+        Employee e2 = new Employee("Neha", 50000); 
+        e1.display(); 
+        e2.display(); 
+    } 
+}
+
+6.RECTANGLE AREA
+class Rectangle { 
+    int length, width; 
+ 
+    Rectangle(int l, int w) { 
+        length = l; 
+        width = w; 
+    } 
+ 
+    void area() {
+         int area = length * width; 
+        System.out.println("Area: " + area); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Rectangle r1 = new Rectangle(5, 10); 
+        r1.area(); 
+    } 
+}
+
+7.CAR MODEL AND YEAR
+class Car { 
+    String model; 
+    int year; 
+    static int totalCars = 0; 
+ 
+    Car(String m, int y) { 
+        model = m; 
+        year = y; 
+        totalCars++; 
+    } 
+ 
+    void show() { 
+        System.out.println(model + " - " + year); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Car c1 = new Car("Honda Civic", 2021); 
+        Car c2 = new Car("Toyota Corolla", 2020); 
+ 
+        c1.show(); 
+        c2.show(); 
+        System.out.println("Total Cars: " + totalCars); 
+    } 
+}
+
+8.BOX VOLUME
+class Box { 
+    int height, width, depth; 
+ 
+    Box(int h, int w, int d) { 
+        height = h; 
+        width = w; 
+        depth = d; 
+    } 
+ 
+    void volume() { 
+        int vol = height * width * depth;
+           System.out.println("Volume: " + vol); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Box b1 = new Box(2, 3, 4); 
+        b1.volume(); 
+    } 
+}
+
+9.MOBILE BRAND AND PRICE
+class Mobile { 
+    String brand; 
+ 
+    Mobile(String b) { 
+        brand = b; 
+    } 
+ 
+    void show() { 
+        int price = 15000;  
+        System.out.println("Brand: " + brand + ", Price: " + price); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Mobile m1 = new Mobile("Samsung"); 
+        Mobile m2 = new Mobile("Apple"); 
+ 
+        m1.show(); 
+        m2.show(); 
+    } 
+}
+
+10.BANK ACCOUNT BALANCE AND NUMBER
+class BankAccount { 
+    int accountNumber; 
+    double balance; 
+ 
+    BankAccount(int acc, double bal) { 
+        accountNumber = acc; 
+        balance = bal; 
+    } 
+ 
+    void deposit(double amount) { 
+        balance += amount; 
+        System.out.println("Updated Balance: " + balance); 
+    } 
+ 
+    public static void main(String[] args) { 
+        BankAccount acc1 = new BankAccount(101, 5000); 
+ acc1.deposit(2000); 
+    } 
+}
+3.
