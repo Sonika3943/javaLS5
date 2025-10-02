@@ -1,0 +1,266 @@
+11. Laptop class 
+class Laptop { 
+    String brand; 
+    int ramSize; 
+    static int count = 0; 
+ 
+    Laptop(String b, int r) { 
+        brand = b; 
+        ramSize = r; 
+        count++; 
+    } 
+ 
+    void display() { 
+        System.out.println(brand + " with " + ramSize + "GB RAM"); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Laptop l1 = new Laptop("Dell", 8); 
+        Laptop l2 = new Laptop("HP", 16); 
+        l1.display(); 
+        l2.display(); 
+        System.out.println("Total Laptops: " + Laptop.count); 
+    } 
+
+12. Person class 
+class Person { 
+    String name; 
+    int age; 
+ 
+    Person(String n, int a) { 
+        name = n; age = a; 
+    } 
+ 
+    void checkVoting() { 
+        String message = (age >= 18) ? "Eligible" : "Not Eligible";  
+        System.out.println(name + " is " + message + " to vote."); 
+    } 
+ 
+    public static void main(String[] args) { 
+        Person p1 = new Person("Amit", 20); 
+        Person p2 = new Person("Ravi", 16); 
+ p1.checkVoting(); 
+        p2.checkVoting(); 
+    } 
+} 
+
+13.class Inventory
+class Inventory {
+    String itemName;
+    int quantity;
+    static int totalItems = 0;
+    // Constructor
+    Inventory(String itemName, int quantity) {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        totalItems += quantity; // update static variable
+    }
+    // Method to display details
+    void display() {
+        System.out.println("Item: " + itemName + ", Quantity: " + quantity);
+    }
+    // Static method to show total items
+    static void showTotalItems() {
+        System.out.println("Total Items in Inventory: " + totalItems);
+    }
+
+    // Main method for quick demo
+    public static void main(String[] args) {
+        Inventory i1 = new Inventory("Laptop", 5);
+        Inventory i2 = new Inventory("Mouse", 10);
+        i1.display();
+        i2.display();
+        Inventory.showTotalItems();
+    }
+}
+
+14.class City
+class City {
+    String cityName;                  // instance variable
+    static String countryName = "India"; // static variable
+    // Constructor
+    City(String cityName) {
+        this.cityName = cityName;
+    }
+    // Method with local variable
+    void displayDetails() {
+        int population = 1000000; // local variable
+        System.out.println("City: " + cityName);
+        System.out.println("Country: " + countryName);
+        System.out.println("Population: " + population);
+    }
+    // Main method to test
+    public static void main(String[] args) {
+        City c1 = new City("Delhi");
+        c1.displayDetails();
+    }
+}
+
+15.class LaptopStore {
+    String laptopName;       // instance variable
+    double price;            // instance variable
+    static String storeName = "Tech World"; // static variable
+
+    // Constructor
+    LaptopStore(String laptopName, double price) {
+        this.laptopName = laptopName;
+        this.price = price;
+    }
+
+    // Method to apply discount using local variable
+    void applyDiscount() {
+        double discount = 0.10; // local variable (10% discount)
+        double finalPrice = price - (price * discount);
+        System.out.println("Store: " + storeName);
+        System.out.println("Laptop: " + laptopName);
+        System.out.println("Original Price: " + price);
+        System.out.println("Discounted Price: " + finalPrice);
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        LaptopStore l1 = new LaptopStore("Dell Inspiron", 50000);
+        l1.applyDiscount();
+    }
+}
+
+
+16.class Hotel {
+    String roomType;                  // instance variable
+    static String hotelName = "Grand Palace"; // static variable
+
+    // Constructor
+    Hotel(String roomType) {
+        this.roomType = roomType;
+    }
+
+    // Method to display booking details
+    void displayBooking() {
+        System.out.println("Hotel: " + hotelName);
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Booking Confirmed!");
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        Hotel h1 = new Hotel("Deluxe");
+        Hotel h2 = new Hotel("Suite");
+
+        h1.displayBooking();
+        h2.displayBooking();
+    }
+}
+
+17.class University {
+    String studentName;                  // instance variable
+    int rollNumber;                      // instance variable
+    static String universityName = "ABC University"; // static variable
+
+    // Constructor
+    University(String studentName, int rollNumber) {
+        this.studentName = studentName;
+        this.rollNumber = rollNumber;
+    }
+
+    // Method to display details
+    void displayDetails() {
+        System.out.println("University: " + universityName);
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Roll Number: " + rollNumber);
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        University s1 = new University("Rahul Sharma", 101);
+        University s2 = new University("Anita Verma", 102);
+
+        s1.displayDetails();
+        s2.displayDetails();
+    }
+}
+
+18.class Flight {
+    int flightNumber;                     // instance variable
+    String destination;                   // instance variable
+    static String airlineName = "Sky Airlines"; // static variable
+
+    // Constructor
+    Flight(int flightNumber, String destination) {
+        this.flightNumber = flightNumber;
+        this.destination = destination;
+    }
+
+    // Method to show details
+    void showDetails() {
+        System.out.println("Airline: " + airlineName);
+        System.out.println("Flight Number: " + flightNumber);
+        System.out.println("Destination: " + destination);
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        Flight f1 = new Flight(101, "New York");
+        Flight f2 = new Flight(202, "London");
+
+        f1.showDetails();
+        f2.showDetails();
+    }
+}
+
+19.class Game {
+    String gameName;              // instance variable
+    String genre;                 // instance variable
+    static String platform = "PC"; // static variable
+
+    // Constructor
+    Game(String gameName, String genre) {
+        this.gameName = gameName;
+        this.genre = genre;
+    }
+
+    // Method with local variable
+    void displayDetails() {
+        double rating = 4.5; // local variable
+        System.out.println("Game: " + gameName);
+        System.out.println("Genre: " + genre);
+        System.out.println("Platform: " + platform);
+        System.out.println("Rating: " + rating);
+    }
+
+    // Main method to test
+    public static void main(String[] args) {
+        Game g1 = new Game("Valorant", "Shooter");
+        g1.displayDetails();
+    }
+}
+
+
+20.class Store {
+    String itemName;                        // instance variable
+    double price;                           // instance variable
+    static String storeLocation = "Mumbai"; // static variable
+
+    // Constructor
+    Store(String itemName, double price) {
+        this.itemName = itemName;
+        this.price = price;
+    }
+
+    // Method using local variable
+    void showFinalPrice() {
+        double discount = 0.15; // local variable (15% discount)
+        double finalPrice = price - (price * discount);
+        System.out.println("Store Location: " + storeLocation);
+        System.out.println("Item: " + itemName);
+        System.out.println("Original Price: " + price);
+        System.out.println("Discounted Price: " + finalPrice);
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        Store s1 = new Store("Shoes", 2000);
+        s1.showFinalPrice();
+    }
+}
+
+
